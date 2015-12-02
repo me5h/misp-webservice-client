@@ -1,15 +1,15 @@
 <?php
 // Setup
-// ULR's to get from
+// Url to get from
+// Add tags to pull only tagged items
+// for example: /events/xml/download/false/true/tag1&&tag2&&!tag3
+// further details available on the misp automation page
 $baseexporturl = 'http://';
 $api_export_index = '';
 
-// URL's to send to
+// Url to send to
 $baseimporturl = 'http://';
 $api_import_index = '';
-
-// seperate tags with &&
-// $eventtags = 'nicp';
 
 /*----------------------------------------------------------------------------
 Get Index of events needed

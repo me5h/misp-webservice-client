@@ -1,11 +1,12 @@
 <?php
 // Setup
-// ULR's to get from
-$baseexporturl = 'http://misp-3.local/events/';
+// Url to get from
+// 2.4 supports building a full index form /restSearch/download/
+$baseexporturl = 'http://';
 $api_export_index = 'restSearch/download/';
 
-// URL's to send to
-$baseimporturl = 'http://misp-23.local/events/';
+// Url to send to
+$baseimporturl = 'http://';
 $api_import_index = '';
 
 // seperate tags with &&
