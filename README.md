@@ -1,5 +1,5 @@
 # misp-webservice-client
-A MISP Webservice for connecting 2 different versions of MISP and sharing events
+A MISP Webservice client for connecting 2 different versions of MISP and sharing events.
 
 Brief:
 This readme details the use of the web service client to connect one MISP with another to automatically share event data between them while removing the dependency on the versions being connected. There are 2 connectors 1 for each direction as the concerns need to be managed differently. All other functionality such as tagging is provided by the Rest API.
@@ -8,7 +8,7 @@ Separating concerns between versions
 The following is a detailed breakdown of all the values that need changing to create a valid event between versions.
  
 Distribution level 
-[distribution] => 0
+It is advised to set this to [distribution] => 0
 Available version values
 2.3 = 0-3
 2.4 = 0-4
@@ -160,21 +160,12 @@ Unset 2.4 Attribute  [sharing_group_id] => 0
 2.4 Attribute Distribution
    [distribution] => 3
 
-Checking if event exists already and needs updating
+Other features
+Checking if event exists already and needs updating by asking the API using POST and see what it returns.
 (PUT) update
 
-
-Setting tags
-Rest API paths
 Logging
-$data = 'some data'.PHP_EOL; $fp = fopen('somefile', 'a'); fwrite($fp, $data);
+Running the script will log all event UUID's to a file with time and date
+You can also store the event json that was trasferred for later use.
 
-Get index of all available 
-Get index of current 
 
-get actual event
-
-check its uuid in current index
-for each row->uuid == event uuid
-get row id
-pass event to PUT/ id
